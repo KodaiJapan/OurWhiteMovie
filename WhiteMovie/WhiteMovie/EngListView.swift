@@ -13,10 +13,10 @@ struct EngListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(dougaData.dougas.subjects.math, id: \.self) { douga in
-                    NavigationLink(destination: DougaView(dougaurl: douga.url,
+                ForEach(dougaData.dougas.subjects.english, id: \.self) { douga in
+                    NavigationLink(destination: DougaView(dougaData: dougaData, dougaUrl: douga.url,
                                                           dougaTitle: douga.title,
-                                                          dougaDetail:douga.detail)) {
+                                                          dougaDetail:douga.detail, dougaPdf: douga.pdf)) {
                         ListCellView(title:douga.title)
                     }.navigationTitle("英語")
                     .navigationBarTitleDisplayMode(.inline)

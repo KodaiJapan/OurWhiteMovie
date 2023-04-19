@@ -10,35 +10,50 @@ import AVKit
 
 
 struct DougaView: View {
-//dougaurlはObservedObjectの方がいいのか？
-    @State var dougaurl: String
+    
+    @State private var isShowingPdf = false
+    //ListView上のObservedObjectを観察するためのObservedObject
+    @ObservedObject var dougaData: MovieModel
     @State var player = AVPlayer()
-    var dougaTitle: String
-    var dougaDetail: String
+    
+    let dougaUrl: String
+    let dougaTitle: String
+    let dougaDetail: String
+    let dougaPdf: String
+    
+    //var douga~: Stringをデータに対応する分付け加えてDougaView内のデータとする
     
     var body: some View {
+        ZStack{
         ScrollView{
             VStack{
                 VideoPlayer(player: player)
-            .aspectRatio(16/9, contentMode: .fit)
-            .onAppear() {
-                self.player = AVPlayer(url:Bundle.main.url(forResource:dougaurl, withExtension:"mp4")!)
-            }
-                VStack{
-                    Text(dougaTitle)
-                    Text(dougaDetail)
-                }
-                
-                        HStack{
-                            Button("再生"){
-                                player.play()
-                            }
-                            Button("ストップ"){
-                                player.pause()
-                            }
+                    .aspectRatio(16/9, contentMode: .fit)
+                    .onAppear() {
+                        self.player = AVPlayer(url:Bundle.main.url(forResource:dougaUrl, withExtension:"mp4")!)
+                    }
+                Text(dougaTitle)
+                Text(dougaDetail)
+                Spacer(minLength: 50)
+                if #available(iOS 15.0, *) {
+                    HStack{
+                        Button("再生"){
+                            player.play()
+                        }.modifier(FlatGlassView())
+                        Button("ストップ"){
+                            player.pause()
+                        }.modifier(FlatGlassView())
+                        Button("PDFを表示"){
+                            self.isShowingPdf.toggle()
+                        }.sheet(isPresented: self.$isShowingPdf) {
+                            PDFUIView(samplepdf: dougaPdf)
                         }
                     }
+                }
             }
+                    }
+        }.background(Image("glassback3").resizable().scaledToFill())
+
         }
     }
 
@@ -46,6 +61,6 @@ struct DougaView: View {
 
 struct DougaView_Previews: PreviewProvider {
     static var previews: some View {
-        DougaView(dougaurl: "sampleDouga", player: AVPlayer(),dougaTitle: "sampleTitle",dougaDetail: "SampleDetailSampleDetailSampleDetailSampleDetailSampleDetailSampleDetailSampleDetailSampleDetailSampleDetailSampleDetail")
+        DougaView(dougaData: MovieModel(), player: AVPlayer(),dougaUrl: "sampleDouga",dougaTitle: "sampleTitle",dougaDetail: "SampleDetailSampleDetailSampleDetailSampleDetailSampleDetailSampleDetailSampleDetailSampleDetailSampleDetailSampleDetail", dougaPdf: "samplepdf")
     }
 }

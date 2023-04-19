@@ -25,7 +25,7 @@ struct ListCellView: View {
                         Text(title)
                         Spacer()
                     }
-                }.frame(width:.infinity, height: 70)
+                }.frame(width:UIScreen.main.bounds.width-100, height: 70)
         }
     }
 }
