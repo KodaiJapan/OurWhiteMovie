@@ -10,16 +10,9 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var dougaData: MovieModel
     var body: some View {
-        TabView {
-            MathListView(dougaData: dougaData).tabItem {
-                Image(systemName: "1.circle.fill")
-            }
-            EngListView().tabItem {
-                Image(systemName: "2.circle.fill")
-            }
+            SubjectListView(dougaData: dougaData)
         }
     }
-}
 
 
 struct ContentView_Previews: PreviewProvider {

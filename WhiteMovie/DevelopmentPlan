@@ -1,3 +1,26 @@
 2023/4/19
 priority
-3 hours of coding
+2 hours of coding
+
+nessesary views
+1. login view
+2. signup view
+3. douga view
+4. home view
+5. pdf view
+6. history view
+
+今夜からglassmorphismの学習に時間をかけて、
+数日後からGlassmorphismを活用した
+各Viewのデザインを終わらせ、
+
+必要なViewと全体構成を終わらせて
+機能的な状態をまず作って、
+
+デザインを画面に適応させる。
+
+そこからFireBaseなどの接続を行っていく。
+有料コンテンツの作成が行える状態を作る。
+
+2023/4/20~2023/4/30
+ログインViewとサインアップView、適応時の画面遷移について研究する

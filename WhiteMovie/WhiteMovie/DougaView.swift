@@ -14,12 +14,14 @@ struct DougaView: View {
     @State private var isShowingPdf = false
     //ListView上のObservedObjectを観察するためのObservedObject
     @ObservedObject var dougaData: MovieModel
+    //@State変数にしておくと、初期化後に.onAppearで値を変更後Viewの再描写する
     @State var player = AVPlayer()
     
     let dougaUrl: String
     let dougaTitle: String
     let dougaDetail: String
     let dougaPdf: String
+    
     
     //var douga~: Stringをデータに対応する分付け加えてDougaView内のデータとする
     
@@ -34,7 +36,7 @@ struct DougaView: View {
                     }
                 Text(dougaTitle)
                 Text(dougaDetail)
-                Spacer(minLength: 50)
+                Spacer(minLength: 80)
                 if #available(iOS 15.0, *) {
                     HStack{
                         Button("再生"){
@@ -52,7 +54,7 @@ struct DougaView: View {
                 }
             }
                     }
-        }.background(Image("glassback3").resizable().scaledToFill())
+        }.background(Image("glassback4").resizable().scaledToFill())
 
         }
     }

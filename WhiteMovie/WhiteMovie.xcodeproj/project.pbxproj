@@ -18,8 +18,7 @@
 		C410930429E416CD00E99F7A /* WhiteMovieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410930329E416CD00E99F7A /* WhiteMovieUITestsLaunchTests.swift */; };
 		C410931229E4175200E99F7A /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410931129E4175200E99F7A /* MovieModel.swift */; };
 		C410931429E4176700E99F7A /* DougaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410931329E4176700E99F7A /* DougaView.swift */; };
-		C410931829E417A300E99F7A /* MathListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410931729E417A300E99F7A /* MathListView.swift */; };
-		C410931A29E417B000E99F7A /* EngListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410931929E417B000E99F7A /* EngListView.swift */; };
+		C410931829E417A300E99F7A /* SubjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410931729E417A300E99F7A /* SubjectListView.swift */; };
 		C410931D29E4182800E99F7A /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410931C29E4182800E99F7A /* ListCellView.swift */; };
 		C410935C29E5C7EB00E99F7A /* sample1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C410935B29E5C7EB00E99F7A /* sample1.jpg */; };
 		C410935F29E5C82800E99F7A /* shiratani.json in Resources */ = {isa = PBXBuildFile; fileRef = C410935E29E5C82800E99F7A /* shiratani.json */; };
@@ -61,8 +60,7 @@
 		C410930329E416CD00E99F7A /* WhiteMovieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteMovieUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C410931129E4175200E99F7A /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		C410931329E4176700E99F7A /* DougaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DougaView.swift; sourceTree = "<group>"; };
-		C410931729E417A300E99F7A /* MathListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathListView.swift; sourceTree = "<group>"; };
-		C410931929E417B000E99F7A /* EngListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngListView.swift; sourceTree = "<group>"; };
+		C410931729E417A300E99F7A /* SubjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectListView.swift; sourceTree = "<group>"; };
 		C410931C29E4182800E99F7A /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
 		C410935B29E5C7EB00E99F7A /* sample1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sample1.jpg; path = ../../Desktop/sample1.jpg; sourceTree = "<group>"; };
 		C410935D29E5C82200E99F7A /* sampleDouga.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = sampleDouga.mp4; path = ../../Desktop/sampleDouga.mp4; sourceTree = "<group>"; };
@@ -129,9 +127,8 @@
 				C41092E729E416CD00E99F7A /* ContentView.swift */,
 				C410931329E4176700E99F7A /* DougaView.swift */,
 				C40DB85C29EFBD2B0048518F /* FlatGlassView.swift */,
-				C410931729E417A300E99F7A /* MathListView.swift */,
+				C410931729E417A300E99F7A /* SubjectListView.swift */,
 				C4DBEA9E29ED3E57008415D5 /* PDFUIView.swift */,
-				C410931929E417B000E99F7A /* EngListView.swift */,
 				C410931C29E4182800E99F7A /* ListCellView.swift */,
 				C41092E929E416CD00E99F7A /* Assets.xcassets */,
 				C41092EB29E416CD00E99F7A /* WhiteMovie.entitlements */,
@@ -308,7 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C410931829E417A300E99F7A /* MathListView.swift in Sources */,
+				C410931829E417A300E99F7A /* SubjectListView.swift in Sources */,
 				C410931229E4175200E99F7A /* MovieModel.swift in Sources */,
 				C410931429E4176700E99F7A /* DougaView.swift in Sources */,
 				C41092E829E416CD00E99F7A /* ContentView.swift in Sources */,
@@ -316,7 +313,6 @@
 				C40DB85D29EFBD2B0048518F /* FlatGlassView.swift in Sources */,
 				C4DBEA9F29ED3E57008415D5 /* PDFUIView.swift in Sources */,
 				C41092E629E416CD00E99F7A /* WhiteMovieApp.swift in Sources */,
-				C410931A29E417B000E99F7A /* EngListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,6 +32,7 @@ struct PDFKitView: UIViewRepresentable {
 
 struct PDFUIView: View {
     let samplepdf: String
+    //@State変数にしておくと、初期化後に.onAppearで値を変更後Viewの再描写する
     @State var pdfDoc = PDFDocument()
 
     var body: some View {
