@@ -54,10 +54,9 @@ struct DougaView: View {
                 }
             }
                     }
-        }.background(Image("glassback4").resizable().scaledToFill())
-
-        }
+        }.background(Color(red: 0.3, green: 0.8, blue: 0.8))
     }
+}
 
 
 

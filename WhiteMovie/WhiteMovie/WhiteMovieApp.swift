@@ -10,10 +10,17 @@ import SwiftUI
 @main
 struct WhiteMovieApp: App {
     @StateObject private var movies = MovieModel()
+    //Viewが起動されたとき専用の処理
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(selectedTab: ._home)
                 .environmentObject(movies)
         }
+    }
+}
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        return true
     }
 }

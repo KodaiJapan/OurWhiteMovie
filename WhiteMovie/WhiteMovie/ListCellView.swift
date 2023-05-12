@@ -12,10 +12,6 @@ struct ListCellView: View {
     
     var body: some View {
         VStack {
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(lineWidth: 1)
-                .fill(Color.red)
-                .overlay {
                     HStack{
                         Image("sample1")
                             .resizable()
@@ -25,10 +21,13 @@ struct ListCellView: View {
                         Text(title)
                         Spacer()
                     }
-                }.frame(width:UIScreen.main.bounds.width-100, height: 70)
+        }.frame(maxWidth:.infinity,maxHeight: 70)
+            .foregroundColor(.white)
+            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10))
+            .overlay(.white.opacity(0.5), in: RoundedRectangle(cornerRadius: 10).stroke(style: .init()))
+            .padding(4)
         }
     }
-}
 
 struct CustomListCellView_Previews: PreviewProvider {
     static var previews: some View {
