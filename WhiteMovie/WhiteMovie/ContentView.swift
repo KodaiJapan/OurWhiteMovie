@@ -10,14 +10,10 @@ import Foundation
 
 struct ContentView: View {
     @AppStorage("selectedTab") var selectedTab : NavigationModel = ._home
+    
     @EnvironmentObject var dougaData: MovieModel
     
     @State private var isOpen : Bool = false
-    
-    
-    init(selectedTab: NavigationModel) {
-        self.selectedTab = ._home
-    }
     
     var body: some View {
         ZStack {
@@ -33,24 +29,25 @@ struct ContentView: View {
                         switch selectedTab {
                         case ._home:
                             SubjectListView(dougaData: dougaData)
+                            //SubjectListView(dougaData: dougaData)
                         case ._favorite:
                             //FavoriteView()
-                            Text("お気に入りView")
+                            EmptyView()
                         case ._history:
                             //HistoryView()
-                            Text("履歴View")
+                            EmptyView()
                         case ._setting:
                             //SettingView()
-                            Text("設定View")
+                            EmptyView()
                         case ._help:
                             //HelpView()
-                            Text("ヘルプView")
+                            EmptyView()
                         case ._login:
                             //LogInView()
-                            Text("ログインView")
+                            EmptyView()
                         case ._signup:
                             //SignUpView()
-                            Text("サインアップView")
+                            EmptyView()
                         }
                     }.mask(RoundedRectangle(cornerRadius: isOpen ? 30: 0, style: .continuous))
                     .rotation3DEffect(.degrees(isOpen ? 50 : 0), axis: (x: 0, y: -1, z: 0))
@@ -79,7 +76,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(selectedTab: ._home)
+        ContentView()
             .environmentObject(MovieModel())
     }
 }

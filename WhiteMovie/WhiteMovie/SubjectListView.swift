@@ -45,14 +45,14 @@ struct SubjectListView: View {
                                                                           dougaDetail:douga.detail, dougaPdf: douga.pdf)) {
                                         ListCellView(title:douga.title)
                                     }
-                            }
-                            }
+                                }
                         }
+                    }
                 }
             }
-            }
- 
         }
+        
+    }
 }
 
 struct SubjectListView_Previews: PreviewProvider {

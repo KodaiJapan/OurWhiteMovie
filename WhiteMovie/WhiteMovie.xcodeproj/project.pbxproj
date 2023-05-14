@@ -12,6 +12,7 @@
 		C40DB8612A0D99490048518F /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DB8602A0D99490048518F /* NavigationModel.swift */; };
 		C40DB8632A0D9A750048518F /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DB8622A0D9A750048518F /* SideBarView.swift */; };
 		C40DB8652A0D9DB10048518F /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DB8642A0D9DB10048518F /* MenuRow.swift */; };
+		C40DB8672A10F8D10048518F /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DB8662A10F8D10048518F /* EmptyView.swift */; };
 		C41092E629E416CD00E99F7A /* WhiteMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41092E529E416CD00E99F7A /* WhiteMovieApp.swift */; };
 		C41092E829E416CD00E99F7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41092E729E416CD00E99F7A /* ContentView.swift */; };
 		C41092EA29E416CD00E99F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41092E929E416CD00E99F7A /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		C40DB8602A0D99490048518F /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
 		C40DB8622A0D9A750048518F /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		C40DB8642A0D9DB10048518F /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
+		C40DB8662A10F8D10048518F /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		C41092E229E416CD00E99F7A /* WhiteMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C41092E529E416CD00E99F7A /* WhiteMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteMovieApp.swift; sourceTree = "<group>"; };
 		C41092E729E416CD00E99F7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				C410931729E417A300E99F7A /* SubjectListView.swift */,
 				C4DBEA9E29ED3E57008415D5 /* PDFUIView.swift */,
 				C410931C29E4182800E99F7A /* ListCellView.swift */,
+				C40DB8662A10F8D10048518F /* EmptyView.swift */,
 				C41092E929E416CD00E99F7A /* Assets.xcassets */,
 				C41092EB29E416CD00E99F7A /* WhiteMovie.entitlements */,
 				C41092EC29E416CD00E99F7A /* Preview Content */,
@@ -318,6 +321,7 @@
 				C410931829E417A300E99F7A /* SubjectListView.swift in Sources */,
 				C410931229E4175200E99F7A /* MovieModel.swift in Sources */,
 				C40DB8632A0D9A750048518F /* SideBarView.swift in Sources */,
+				C40DB8672A10F8D10048518F /* EmptyView.swift in Sources */,
 				C410931429E4176700E99F7A /* DougaView.swift in Sources */,
 				C40DB8652A0D9DB10048518F /* MenuRow.swift in Sources */,
 				C41092E829E416CD00E99F7A /* ContentView.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuRow: View {
     var item: MenuItem
-    @Binding var selectedMenu: NavigationModel
+    @Binding var selectedTab: NavigationModel
     
     var body: some View {
         HStack(spacing: 14) {
@@ -20,13 +20,13 @@ struct MenuRow: View {
         .padding(12)
         .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
             .fill(.blue)
-            .frame(maxWidth:selectedMenu == item.menu ? .infinity : 0)
+            .frame(maxWidth:selectedTab == item.menu ? .infinity : 0)
             .frame(maxWidth: .infinity, alignment: .leading)
         )
         .background(Color(red: 0, green: 0.4, blue: 0.8))
         .onTapGesture {
             withAnimation(.timingCurve(0.2, 0.8, 0.2, 1)){
-                selectedMenu = item.menu
+                selectedTab = item.menu
             }
         }
     }
@@ -34,6 +34,6 @@ struct MenuRow: View {
 
 struct MenuRow_Previews: PreviewProvider {
     static var previews: some View {
-        MenuRow(item: menuItems[0], selectedMenu: .constant(._home))
+        MenuRow(item: menuItems[0], selectedTab:.constant(._home))
     }
 }

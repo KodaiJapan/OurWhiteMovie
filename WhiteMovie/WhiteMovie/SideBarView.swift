@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-
-
 struct SideBarView: View {
-    @AppStorage("SelectedTab") var selectedTab : NavigationModel = ._home
+    @AppStorage("selectedTab") var selectedTab : NavigationModel = ._home
     
     var body: some View {
         VStack {
@@ -35,7 +33,7 @@ struct SideBarView: View {
                             .opacity(0.3)
                             .padding(.horizontal)
                         //MenuRowを入れる
-                        MenuRow(item: item, selectedMenu: $selectedTab)
+                        MenuRow(item: item, selectedTab: $selectedTab)
                     }
                 }
             }
